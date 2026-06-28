@@ -42,13 +42,23 @@ transition:.3s;
 nav a:hover
 
 .hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("faixada.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .hero h2{
@@ -161,4 +171,9 @@ p{
 
 section h2{
     margin-bottom:60px;
+}
+.logo-site{
+    max-width:700px;
+    width:90%;
+    margin-bottom:30px;
 }
