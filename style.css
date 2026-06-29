@@ -297,4 +297,16 @@ footer{
         right:15px;
     }
 
+    .logo{
+        font-size:0.9rem;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:0.75rem;
+    }
+
 }
