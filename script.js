@@ -1,16 +1,51 @@
-// G. TECH CELULARES
-// Script inicial
+const slides = document.querySelectorAll(".slide");
 
-console.log("Site G. TECH CELULARES carregado com sucesso!");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+let current = 0;
 
-        const destino = document.querySelector(this.getAttribute('href'));
+function showSlide(index){
 
-        destino.scrollIntoView({
-            behavior: 'smooth'
-        });
+    slides.forEach(slide=>{
+        slide.classList.remove("active");
     });
+
+    slides[index].classList.add("active");
+}
+
+nextBtn.addEventListener("click",()=>{
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    showSlide(current);
+
 });
+
+prevBtn.addEventListener("click",()=>{
+
+    current--;
+
+    if(current < 0){
+        current = slides.length - 1;
+    }
+
+    showSlide(current);
+
+});
+
+setInterval(()=>{
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    showSlide(current);
+
+},5000);
